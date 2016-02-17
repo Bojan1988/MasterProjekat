@@ -1,0 +1,65 @@
+﻿<Window x:Class="MasterProjekat1.View.PregledNalogaView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PregledNalogaView" Height="489" Width="925">
+    <Grid Background="#FFDEDCDC">
+        <Grid Margin="0,21,0,390">
+            <Label x:Name="BrojNalogaLbl" Content="Nalog broj:" HorizontalAlignment="Left" Margin="219,4,0,0" VerticalAlignment="Top" Width="84" FontSize="14"/>
+            <TextBox x:Name="BrojNalogaTxt" HorizontalAlignment="Left" Height="23" Margin="308,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" FontSize="14"/>
+            <Label x:Name="DatumNalogaLbl" Content="Datum dokumenta:" HorizontalAlignment="Left" Margin="438,4,0,0" VerticalAlignment="Top" FontSize="14" Width="142"/>
+            <Label Content="Dokument:" HorizontalAlignment="Left" Margin="0,4,0,0" VerticalAlignment="Top" Width="84" FontSize="14"/>
+            <Button x:Name="btnTrazi" Content="Traži" HorizontalAlignment="Left" Margin="776,8,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="btnTrazi_Click"/>
+            <TextBox x:Name="txtVrstaNaloga" HorizontalAlignment="Left" Height="23" Margin="84,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" IsEnabled="False"/>
+            <Label x:Name="lblDatum" Content="" HorizontalAlignment="Left" Margin="597,4,0,0" VerticalAlignment="Top" Width="86" FontSize="14"/>
+
+        </Grid>
+        <DataGrid x:Name="NalogDataGrid" Margin="0,102,0,0" VerticalAlignment="Top" Height="265" CanUserAddRows="False" AutoGenerateColumns="False" FontSize="16" IsEnabled="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Konto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Path=AnalitickiKonto}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Opis">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Path=Opis}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Datum naloga">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Path=DatumNaloga}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Duguje">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Path=Duguje}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Potražuje">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Path=Potrazuje}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Margin="10,372,10,10">
+            <Label x:Name="lblUkupno" Content="Ukupno" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" FontSize="16"/>
+            <Label x:Name="lblDuguje" Content="" HorizontalAlignment="Left" Margin="190,0,0,0" VerticalAlignment="Top" Width="83" FontSize="16" RenderTransformOrigin="0.964,0.581"/>
+            <Label x:Name="lblPotrazuje" Content="" HorizontalAlignment="Left" Margin="373,0,0,0" VerticalAlignment="Top" FontSize="16" Width="100"/>
+            <Button x:Name="btnIzadji" Content="Izadji" HorizontalAlignment="Left" Margin="803,31,0,0" VerticalAlignment="Top" Width="75" Click="btnIzadji_Click"/>
+            <Label Content="Duguje:" HorizontalAlignment="Left" Margin="112,0,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Potražuje:" HorizontalAlignment="Left" Margin="278,0,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Button x:Name="btnPrint" Content="Štampa naloga" HorizontalAlignment="Left" Margin="652,31,0,0" VerticalAlignment="Top" Width="105" Click="btnPrint_Click"/>
+        </Grid>
+    </Grid>
+</Window>

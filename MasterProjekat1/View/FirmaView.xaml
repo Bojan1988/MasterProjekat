@@ -1,0 +1,55 @@
+﻿<Window x:Class="MasterProjekat1.View.FirmaView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FirmaView" Height="502" Width="634">
+    <Grid Margin="0,0,2,5">
+        <Label x:Name="lblNazivFirme" Content="Firma" Height="37" FontSize="18" Margin="0,0,0,430" Padding="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" BorderThickness="0" RenderTransformOrigin="0.5,0.5" ScrollViewer.HorizontalScrollBarVisibility="Auto" UseLayoutRounding="True" VerticalAlignment="Top" TextOptions.TextHintingMode="Animated" TextOptions.TextFormattingMode="Display"/>
+        <Menu HorizontalAlignment="Left" Width="168" Margin="0,37,0,0" FontSize="14" RenderTransformOrigin="0,0.5">
+            <MenuItem Header="Finansijsko knjigovodstvo">
+                <MenuItem Header="Nalozi za knjiženje" >
+                    <MenuItem x:Name="itmUnosNaloga" Header="Unos naloga" Click="itmUnosNaloga_Click"/>
+                    <MenuItem Header="Pregled naloga" Click="MenuItem_Click_1"/>
+                    <MenuItem Header="Unos u KPR"/>
+                    <MenuItem Header="Zatvaranje &quot;5&quot; i &quot;6&quot;"/>
+                </MenuItem>
+                <MenuItem Header="Pregledi">
+                    <MenuItem Header="Analitička kartica" Click="MenuItem_Click"/>
+                    <MenuItem Header="Bilans kupca - dobavljača"/>
+                    <MenuItem Header="Zaključni list"/>
+                    <MenuItem Header="Dnevnik glavne knjige"/>
+                    <MenuItem Header="Lista prometa"/>
+                    <MenuItem Header="Promet po kontima"/>
+                </MenuItem>
+                <MenuItem Header="Izveštaji">
+                    <MenuItem Header="Analitičke kartice"/>
+                    <MenuItem Header="Nalozi za knjiženje"/>
+                    <MenuItem Header="Zaključni list"/>
+                    <MenuItem Header="Lista prometa"/>
+                    <MenuItem Header="***dodati***"/>
+                </MenuItem>
+                <MenuItem Header="Šifarnik"/>
+                <MenuItem Header="Kontni plan">
+                    <MenuItem Header="Zakonska konta"/>
+                    <MenuItem Header="Kontni plan"/>
+                    <MenuItem Header="Preknjižavanje sa konta na konto"/>
+                </MenuItem>
+            </MenuItem>
+            <Separator/>
+            <MenuItem Header="Kupci - Dobavljači" Width="164"/>
+            <Separator/>
+            <MenuItem Header="PDV" RenderTransformOrigin="0,0.5" Width="153" Height="22">
+                <MenuItem Header="Obračun PDV"/>
+                <MenuItem Header="KPR"/>
+                <MenuItem Header="KIR"/>
+            </MenuItem>
+            <Separator/>
+            <MenuItem Header="Osnovna sredstva" Width="152"/>
+            <Separator/>
+            <MenuItem Header="Kraj godine" RenderTransformOrigin="0,0.5" Width="165"/>
+            <Separator/>
+            <MenuItem Header="Sistem" RenderTransformOrigin="0,0.5" VerticalAlignment="Bottom" Width="153"/>
+            <Separator/>
+            <MenuItem Header="Kraj izbora" RenderTransformOrigin="0,0.5" Width="157"/>
+        </Menu>
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="MasterProjekat1.View.ListaFirmi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ListaFirmi" Height="435" Width="391">
+    <Grid Background="#FFA89E9E">
+
+        <ListBox x:Name="listBoxNazivi" Width="212" Margin="0,0,176,0" ItemsSource="{Binding _imenaFirmi}" HorizontalAlignment="Left"/>
+
+        <Button x:Name="btn1" Content="Knjiženje" Height="30" VerticalAlignment="Top" Width="90" Click="Button_Click" Margin="217,10,0,0" HorizontalAlignment="Left"/>
+        <Button x:Name="btnObrisiFirmu" Content="Izmeni podatke" HorizontalAlignment="Left" Margin="217,47,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="Button_Click_1"/>
+        <Button Content="Početna" HorizontalAlignment="Left" Margin="217,82,0,0" VerticalAlignment="Top" Width="90" Height="30" RenderTransformOrigin="0.478,0.444" Click="Button_Click_2"/>
+        <Button Content="Nova firma" HorizontalAlignment="Left" Margin="217,117,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="Button_Click_3"/>
+        <Button x:Name="btnPregledPodataka" Content="Podaci firme" HorizontalAlignment="Left" Margin="217,152,0,0" VerticalAlignment="Top" Width="90" Height="29" Click="btnPregledPodataka_Click"/>
+
+    </Grid>
+</Window>

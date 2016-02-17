@@ -1,0 +1,73 @@
+﻿<Window x:Class="MasterProjekat1.View.UnosIzmenaFirme"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="unosFirme" Height="429" Width="308">
+    <Grid Background="#FF7A7373">
+
+        <Label Content="Unesite podatke nove firme" HorizontalAlignment="Left" Margin="15,28,0,0" VerticalAlignment="Top" Height="34" Width="230" FontSize="18"/>
+        <Menu Height="28" VerticalAlignment="Top">
+            <MenuItem Header="Početna" Height="28" Width="77" FontSize="18" FontStretch="Condensed" TextOptions.TextHintingMode="Animated" Click="MenuItem_Click"/>
+        </Menu>
+        <Label Content="Naziv &#xD;&#xA;" HorizontalAlignment="Left" Margin="1,63,0,0" VerticalAlignment="Top" Width="44" Height="28"/>
+        <TextBox x:Name="txtUnosNaziv" HorizontalAlignment="Left" Height="23" Margin="50,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" TextChanged="TextBox_TextChanged">
+            <TextBox.ContextMenu>
+                <ContextMenu/>
+            </TextBox.ContextMenu>
+        </TextBox>
+        <Label Content="Adresa&#xA;" HorizontalAlignment="Left" Margin="1,91,0,0" VerticalAlignment="Top" Width="56" Height="28"/>
+        <TextBox x:Name="txtAdresa" HorizontalAlignment="Left" Height="23" Margin="50,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" TextChanged="TextBox_TextChanged">
+            <TextBox.ContextMenu>
+                <ContextMenu/>
+            </TextBox.ContextMenu>
+        </TextBox>
+        <Label Content="PIB&#xA;" HorizontalAlignment="Left" Margin="1,119,0,0" VerticalAlignment="Top" Width="33" Height="23"/>
+        <TextBox x:Name="txtPIB" HorizontalAlignment="Left" Height="23" Margin="50,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" TextChanged="TextBox_TextChanged">
+            <TextBox.ContextMenu>
+                <ContextMenu/>
+            </TextBox.ContextMenu>
+        </TextBox>
+        <Label x:Name="lblMatBroj" Content="Matični broj" HorizontalAlignment="Left" Margin="1,142,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtMaticniBr" HorizontalAlignment="Left" Height="21" Margin="115,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" TextChanged="TextBox_TextChanged">
+            <TextBox.ContextMenu>
+                <ContextMenu/>
+            </TextBox.ContextMenu>
+        </TextBox>
+
+        <Label x:Name="lblTelefon" Content="Telefon&#xA;" HorizontalAlignment="Left" Margin="1,172,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="txtTelefon" HorizontalAlignment="Left" Margin="57,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" SelectionOpacity="0" SpellCheck.IsEnabled="True" Width="204">
+            <TextBox.ContextMenu>
+                <ContextMenu/>
+            </TextBox.ContextMenu>
+        </TextBox>
+        <Label x:Name="lblEmail" Content="E-mail" HorizontalAlignment="Left" Margin="1,200,0,0" VerticalAlignment="Top" Width="56" Height="28"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="57,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" TextChanged="TextBox_TextChanged">
+            <TextBox.ContextMenu>
+                <ContextMenu/>
+            </TextBox.ContextMenu>
+        </TextBox>
+
+        <Label x:Name="lblRacun" Content="Račun&#xA;" HorizontalAlignment="Left" Margin="0,228,0,0" VerticalAlignment="Top" Width="45" Height="28"/>
+        <TextBox x:Name="txtRacun" HorizontalAlignment="Left" Height="23" Margin="57,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" TextChanged="TextBox_TextChanged">
+            <TextBox.ContextMenu>
+                <ContextMenu/>
+            </TextBox.ContextMenu>
+        </TextBox>
+
+
+
+        <Label  Content="Sifra delatnosti" HorizontalAlignment="Left" Margin="1,262,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.192"/>
+        <TextBox   x:Name="txtDelatnost" HorizontalAlignment="Left" Height="23" Margin="95,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" TextChanged="TextBox_TextChanged">
+            <TextBox.ContextMenu>
+                <ContextMenu/>
+            </TextBox.ContextMenu>
+        </TextBox>
+
+        <Label Content="Obveznik PDV-a" HorizontalAlignment="Left" Margin="0,287,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.192"/>
+        <CheckBox x:Name="cbPDV" Content=" da/ne" HorizontalAlignment="Left" Margin="115,293,0,0" VerticalAlignment="Top" Width="105"/>
+
+        <Button Content="Sačuvaj" HorizontalAlignment="Left" Margin="90,329,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" RenderTransformOrigin="0.493,0.5"/>
+        <Button Content="Obriši sve" HorizontalAlignment="Left" Margin="10,329,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Sačuvaj i nastavi" HorizontalAlignment="Left" Margin="175,329,0,0" VerticalAlignment="Top" Width="91" Click="Button_Click_2"/>
+
+    </Grid>
+</Window>
